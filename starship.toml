@@ -1,0 +1,48 @@
+scan_timeout = 10
+add_newline = false
+
+format = """$sudo$directory $git_branch$git_commit$git_state$python$rust$cmd_duration[  ](cyan) """
+
+[line_break]
+disabled = true
+
+[username]
+style = "purple"
+
+[hostname]
+ssh_only = true
+format = "[@$hostname](purple)"
+trim_at = ".acadian-asset.com"
+
+[package]
+disabled = true
+
+[directory]
+truncation_length = 10
+truncate_to_repo = true
+format = "[$path](cyan bold)"
+
+[git_branch]
+format = "[$symbol$branch](purple)"
+
+[git_commit]
+style = "red"
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = false
+disabled = false
+format = "[$duration](blue)"
+
+[git_state]
+style = "red bold"
+
+[git_status]
+style = "red"
+
+[python]
+symbol = "  "
+format = " [${symbol}${pyenv_prefix}(${version} )](yellow bold)[$virtualenv ](green bold)"
+
+[rust]
+format = " [$symbol($version )]($style)"
